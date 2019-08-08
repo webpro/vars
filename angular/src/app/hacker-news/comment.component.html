@@ -1,0 +1,9 @@
+<article>
+  <p class="meta">{{ comment.user }} {{ comment.time_ago }}</p>
+
+  <div [innerHTML]="comment.content"></div>
+
+  <div class="replies">
+    <div *ngFor="let comment of comment.comments"><app-comment [comment]="comment"></app-comment></div>
+  </div>
+</article>
