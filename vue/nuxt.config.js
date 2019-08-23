@@ -1,23 +1,33 @@
+import manifest from './static/manifest.json';
+
+manifest.start_url = `${manifest.start_url}?standalone=true`;
+manifest.icons = manifest.icons.map(icon => {
+  icon.src = `/${icon.src}`;
+  return icon;
+});
+
 export default {
   head: {
+    htmlAttrs: {
+      lang: 'en'
+    },
     titleTemplate: '%s',
-    meta: [],
+    meta: [
+      { name: 'viewport', content: 'width=device-width,initial-scale=1.0' },
+      { name: 'theme-color', content: '#333333' }
+    ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
   css: ['~/static/global.css'],
 
   loading: {
-    color: '#00C48D'
+    color: '#333333'
   },
 
-  manifest: {
-    name: 'VARS - Vue',
-    short_name: 'vars-vue',
-    description: 'HackerNews clone built with Nuxt.js',
-    theme_color: '#2F495E',
-    start_url: '/'
-  },
+  manifest,
+
+  modules: ['@nuxtjs/pwa'],
 
   devModules: [],
 

@@ -7,7 +7,10 @@ export default {
   layout: 'default',
   head() {
     return {
-      title: 'Vue (with Nuxt.js)'
+      title: 'Vue (with Nuxt.js)',
+      meta: [
+        { hid: 'description', name: 'description', content: 'VARS - Vue' }
+      ]
     };
   },
 }
