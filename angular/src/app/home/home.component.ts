@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   template: `
@@ -8,8 +8,9 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  constructor(private titleService: Title) {}
+  constructor(private titleService: Title, private metaService: Meta) {}
   ngOnInit() {
     this.titleService.setTitle('Angular');
+    this.metaService.updateTag({ name: 'description', content: 'VARS - Angular' });
   }
 }

@@ -1,4 +1,4 @@
-import { BrowserModule, Title } from '@angular/platform-browser';
+import { BrowserModule, Title, Meta } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -10,6 +10,8 @@ import { HackerNewsComponent } from './hacker-news/hacker-news.component';
 import { SummaryComponent } from './hacker-news/summary.component';
 import { ItemComponent } from './hacker-news/item.component';
 import { CommentComponent } from './hacker-news/comment.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -21,8 +23,13 @@ import { CommentComponent } from './hacker-news/comment.component';
     ItemComponent,
     CommentComponent
   ],
-  imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }), AppRoutingModule, HttpClientModule],
-  providers: [Title],
+  imports: [
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    AppRoutingModule,
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+  ],
+  providers: [Title, Meta],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
