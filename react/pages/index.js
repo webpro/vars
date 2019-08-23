@@ -1,3 +1,5 @@
+import Head from 'next/head';
+
 export default function Page({ stars }) {
   return (
     <>
@@ -16,6 +18,10 @@ export default function Page({ stars }) {
           }
         }
       `}</style>
+      <Head>
+        <title>React (with Next.js)</title>
+        <meta name="description" content="VARS - React" />
+      </Head>
       <h1>React (with Next.js)</h1>
     </>
   );
