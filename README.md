@@ -13,6 +13,7 @@ Nuxt/Next/Sapper are included, as they solve things like routing and SSR out of 
 
 ### Hacker News
 
+- PWA (Lighthouse: 💯)
 - List + detail view
 - Dynamic routing + code-splitting
 - SSR
