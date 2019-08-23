@@ -16,6 +16,7 @@
 
 <svelte:head>
   <title>Svelte (with Sapper)</title>
+  <meta name="description" content="VARS - Svelte" />
 </svelte:head>
 
 <h1>Svelte (with Sapper)</h1>
