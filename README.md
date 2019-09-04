@@ -19,11 +19,18 @@ Nuxt/Next/Sapper are included, as they solve things like routing and SSR out of 
 - SSR
 - Global CSS
 
+### CRUD
+
+- Based on [7GUIs → CRUD](https://eugenkiss.github.io/7guis/tasks/#crud)
+- Manage state with CRUD (create, read, update, delete) operations
+- The [Svelte CRUD example](https://svelte.dev/examples#7guis-crud)
+
 ## Status
 
 | Feature     | Vue | Angular | React | Svelte |
 | :---------- | :-: | :-----: | :---: | :----: |
 | Hacker News |  ✔  |    ✔    |   ✔   |   ✔    |
+| CRUD        |  x  |    x    |   ✔   |   ✔    |
 | Form        |  x  |    x    |   x   |   x    |
 | ...?        |  x  |    x    |   x   |   x    |
 | ...?        |  x  |    x    |   x   |   x    |

@@ -16,7 +16,7 @@
 
   /* clearfix */
   ul::after {
-    content: "";
+    content: '';
     display: block;
     clear: both;
   }
@@ -33,7 +33,7 @@
 
   .selected::after {
     position: absolute;
-    content: "";
+    content: '';
     width: calc(100% - 1em);
     height: 2px;
     background-color: rgb(255, 62, 0);
@@ -54,11 +54,10 @@
       <a class={segment === undefined ? 'selected' : ''} href=".">home</a>
     </li>
     <li>
-      <a
-        class={segment === 'hacker-news' ? 'selected' : ''}
-        href="/hacker-news">
-        Hacker News
-      </a>
+      <a class={segment === 'hacker-news' ? 'selected' : ''} href="/hacker-news">Hacker News</a>
+    </li>
+    <li>
+      <a class={segment === 'crud' ? 'selected' : ''} href="/crud">CRUD</a>
     </li>
   </ul>
 </nav>

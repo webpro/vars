@@ -63,6 +63,13 @@ export default function(props) {
               </a>
             </Link>
           </li>
+          <li>
+            <Link href="/crud">
+              <a className={route === '/crud' ? 'selected' : ''} href="/crud">
+                CRUD
+              </a>
+            </Link>
+          </li>
         </ul>
       </nav>
     </>
