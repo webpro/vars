@@ -79,6 +79,10 @@
   }
 </style>
 
+<svelte:head>
+  <title>CRUD</title>
+</svelte:head>
+
 <input placeholder="filter prefix" bind:value={prefix} />
 
 <select bind:value={i} size={5}>

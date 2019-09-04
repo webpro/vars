@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Head from 'next/head';
 
 const initialPeople = [
   {
@@ -76,6 +77,10 @@ export default () => {
           clear: both;
         }
       `}</style>
+
+      <Head>
+        <title>CRUD</title>
+      </Head>
 
       <input placeholder="filter prefix" value={prefix} onChange={event => setPrefix(event.target.value)} />
 

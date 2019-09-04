@@ -1,4 +1,5 @@
 import fetch from 'isomorphic-unfetch';
+import Head from 'next/head';
 import Comment from '../../../components/Comment';
 
 function Page({ item }) {
@@ -19,6 +20,11 @@ function Page({ item }) {
           margin: 0;
         }
       `}</style>
+
+      <Head>
+        <title>{item.title}</title>
+      </Head>
+
       <article>
         <a href={item.url}>
           <h1>{item.title}</h1>

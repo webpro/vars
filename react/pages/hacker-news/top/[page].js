@@ -1,5 +1,5 @@
 import fetch from 'isomorphic-unfetch';
-import { useRouter } from 'next/router';
+import Head from 'next/head';
 import Summary from '../../../components/Summary';
 
 const PAGE_SIZE = 30;
@@ -16,6 +16,11 @@ function Page({ items, page }) {
           display: block;
         }
       `}</style>
+
+      <Head>
+        <title>Hacker News</title>
+      </Head>
+
       {items.map((item, i) => (
         <Summary item={item} index={start + i} key={start + i} />
       ))}
