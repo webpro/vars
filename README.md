@@ -30,7 +30,7 @@ Nuxt/Next/Sapper are included, as they solve things like routing and SSR out of 
 | Feature     | Vue | Angular | React | Svelte |
 | :---------- | :-: | :-----: | :---: | :----: |
 | Hacker News |  ✔  |    ✔    |   ✔   |   ✔    |
-| CRUD        |  x  |    x    |   ✔   |   ✔    |
+| CRUD        |  ✔  |    x    |   ✔   |   ✔    |
 | Form        |  x  |    x    |   x   |   x    |
 | ...?        |  x  |    x    |   x   |   x    |
 | ...?        |  x  |    x    |   x   |   x    |

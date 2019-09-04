@@ -9,6 +9,11 @@
             Hacker News
           </router-link>
       </li>
+      <li>
+          <router-link :to="'/crud'" :class="route.startsWith('/crud') ? 'selected' : ''">
+            CRUD
+          </router-link>
+      </li>
     </ul>
   </nav>
 </template>
