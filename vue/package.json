@@ -15,11 +15,14 @@
   "dependencies": {
     "@nuxtjs/pwa": "^3.0.0-beta.16",
     "isomorphic-unfetch": "^3.0.0",
-    "nuxt": "^2.8.1",
-    "stylus": "^0.54.5",
+    "nuxt": "^2.9.2",
+    "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2"
   },
   "devDependencies": {
-    "@nuxtjs/now-builder": "^0.15.3"
+    "@nuxtjs/now-builder": "^0.16.1"
+  },
+  "engines": {
+    "node": "10.x"
   }
 }
