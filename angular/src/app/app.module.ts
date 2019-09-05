@@ -1,6 +1,8 @@
 import { BrowserModule, Title, Meta } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,7 +12,7 @@ import { HackerNewsComponent } from './hacker-news/hacker-news.component';
 import { SummaryComponent } from './hacker-news/summary.component';
 import { ItemComponent } from './hacker-news/item.component';
 import { CommentComponent } from './hacker-news/comment.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
+import { CRUDComponent, PrefixFilterPipe } from './crud/crud.component';
 import { environment } from '../environments/environment';
 
 @NgModule({
@@ -21,13 +23,16 @@ import { environment } from '../environments/environment';
     HackerNewsComponent,
     SummaryComponent,
     ItemComponent,
-    CommentComponent
+    CommentComponent,
+    CRUDComponent,
+    PrefixFilterPipe
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    FormsModule
   ],
   providers: [Title, Meta],
   bootstrap: [AppComponent]

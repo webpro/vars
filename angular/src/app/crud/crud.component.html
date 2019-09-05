@@ -1,0 +1,20 @@
+<input [(ngModel)]="prefix" />
+
+<select #selected [(ngModel)]="i" size="5" (change)="select(selected.value)">
+  <option *ngFor="let person of people | prefixFilter: prefix; index as i" [value]="i">{{
+    person.last + ', ' + person.first
+  }}</option>
+</select>
+
+<label>
+  <input [placeholder]="'first'" [(ngModel)]="first" />
+</label>
+<label>
+  <input [placeholder]="'last'" [(ngModel)]="last" />
+</label>
+
+<div class="buttons">
+  <button (click)="create()">Create</button>
+  <button (click)="update()" [disabled]="!i">Update</button>
+  <button (click)="delete()" [disabled]="!i">Delete</button>
+</div>
